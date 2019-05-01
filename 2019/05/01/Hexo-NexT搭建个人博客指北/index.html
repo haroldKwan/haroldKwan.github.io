@@ -74,7 +74,7 @@
     version: '7.1.0',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
     back2top: true,
-    back2top_sidebar: false,
+    back2top_sidebar: true,
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -96,18 +96,20 @@
 
 
 
-  <meta name="description" content="¶搭建博客时遇到的问题 ¶语言设置未生效 hexo 站点配置文件 _config.yml 中设置的 language  字段值需要在对应主题中有同名的yml语言文件。如笔者设置的语言代码为 zh-Hans ，但使用的 next 主题 languages 目录下是  zh-CN.yml ，将其修改为 zh-Hans.yml后，该问题解决. ¶使用  SSH 地址部署失败 笔者生成 ssh key 时">
+  <meta name="description" content="拖拉了很久，终于把自己的个人博客搭建起来了，希望自己可以坚持写下去。 搭建过程就不一一叙述了，网上很多教程。下面记录一下自己在搭建博客时遇到的一些问题及解决方案,主要包括：站点配置文件中配置语言未生效、使用 SSH 地址部署到 github 失败、以及 NexT 7.1.0 版本下设置文章末尾自动添加版权信息的方法。">
 <meta name="keywords" content="Hexo,NexT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客, Hello World!">
-<meta property="og:url" content="https://haroldkwan.github.io/2019/04/21/第一篇博客-Hello-World/index.html">
+<meta property="og:title" content="Hexo+NexT搭建个人博客指北">
+<meta property="og:url" content="https://haroldkwan.github.io/2019/05/01/Hexo-NexT搭建个人博客指北/index.html">
 <meta property="og:site_name" content="Harold Kwan 的博客">
-<meta property="og:description" content="¶搭建博客时遇到的问题 ¶语言设置未生效 hexo 站点配置文件 _config.yml 中设置的 language  字段值需要在对应主题中有同名的yml语言文件。如笔者设置的语言代码为 zh-Hans ，但使用的 next 主题 languages 目录下是  zh-CN.yml ，将其修改为 zh-Hans.yml后，该问题解决. ¶使用  SSH 地址部署失败 笔者生成 ssh key 时">
+<meta property="og:description" content="拖拉了很久，终于把自己的个人博客搭建起来了，希望自己可以坚持写下去。 搭建过程就不一一叙述了，网上很多教程。下面记录一下自己在搭建博客时遇到的一些问题及解决方案,主要包括：站点配置文件中配置语言未生效、使用 SSH 地址部署到 github 失败、以及 NexT 7.1.0 版本下设置文章末尾自动添加版权信息的方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-01T12:29:51.081Z">
+<meta property="og:image" content="https://haroldkwan.github.io/images/sidebar-show-cc-license.png">
+<meta property="og:updated_time" content="2019-05-01T14:44:38.283Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇博客, Hello World!">
-<meta name="twitter:description" content="¶搭建博客时遇到的问题 ¶语言设置未生效 hexo 站点配置文件 _config.yml 中设置的 language  字段值需要在对应主题中有同名的yml语言文件。如笔者设置的语言代码为 zh-Hans ，但使用的 next 主题 languages 目录下是  zh-CN.yml ，将其修改为 zh-Hans.yml后，该问题解决. ¶使用  SSH 地址部署失败 笔者生成 ssh key 时">
+<meta name="twitter:title" content="Hexo+NexT搭建个人博客指北">
+<meta name="twitter:description" content="拖拉了很久，终于把自己的个人博客搭建起来了，希望自己可以坚持写下去。 搭建过程就不一一叙述了，网上很多教程。下面记录一下自己在搭建博客时遇到的一些问题及解决方案,主要包括：站点配置文件中配置语言未生效、使用 SSH 地址部署到 github 失败、以及 NexT 7.1.0 版本下设置文章末尾自动添加版权信息的方法。">
+<meta name="twitter:image" content="https://haroldkwan.github.io/images/sidebar-show-cc-license.png">
 
 
 
@@ -115,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="https://haroldkwan.github.io/2019/04/21/第一篇博客-Hello-World/">
+  <link rel="canonical" href="https://haroldkwan.github.io/2019/05/01/Hexo-NexT搭建个人博客指北/">
 
 
 
@@ -125,7 +127,7 @@
   };
 </script>
 
-  <title>第一篇博客, Hello World! | Harold Kwan 的博客</title>
+  <title>Hexo+NexT搭建个人博客指北 | Harold Kwan 的博客</title>
   
 
 
@@ -331,7 +333,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://haroldkwan.github.io/2019/04/21/第一篇博客-Hello-World/">
+    <link itemprop="mainEntityOfPage" href="https://haroldkwan.github.io/2019/05/01/Hexo-NexT搭建个人博客指北/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Harold Kwan">
@@ -348,7 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">第一篇博客, Hello World!
+          <h1 class="post-title" itemprop="name headline">Hexo+NexT搭建个人博客指北
 
               
             
@@ -374,24 +376,12 @@
                 
               
 
-              <time title="创建时间：2019-04-21 22:55:15" itemprop="dateCreated datePublished" datetime="2019-04-21T22:55:15+08:00">2019-04-21</time>
+              <time title="创建时间：2019-05-01 21:20:16 / 修改时间：22:44:38" itemprop="dateCreated datePublished" datetime="2019-05-01T21:20:16+08:00">2019-05-01</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-01 20:29:51" itemprop="dateModified" datetime="2019-05-01T20:29:51+08:00">2019-05-01</time>
               
             
           </span>
@@ -443,10 +433,13 @@
       
 
       
-        <h2 id="搭建博客时遇到的问题"><a class="header-anchor" href="#搭建博客时遇到的问题">¶</a>搭建博客时遇到的问题</h2>
-<h3 id="语言设置未生效"><a class="header-anchor" href="#语言设置未生效">¶</a>语言设置未生效</h3>
+        <p>拖拉了很久，终于把自己的个人博客搭建起来了，希望自己可以坚持写下去。<br>
+搭建过程就不一一叙述了，网上很多教程。下面记录一下自己在搭建博客时遇到的一些问题及解决方案,主要包括：站点配置文件中配置语言未生效、使用 <code>SSH</code> 地址部署到 <code>github</code> 失败、以及 <code>NexT 7.1.0</code><br>
+版本下设置文章末尾自动添加版权信息的方法。</p>
+ <a id="more"></a>
+<h2>语言设置未生效</h2>
 <p><code>hexo</code> 站点配置文件 <code>_config.yml</code> 中设置的 <code>language</code>  字段值需要在对应主题中有同名的<code>yml</code>语言文件。如笔者设置的语言代码为 <code>zh-Hans</code> ，但使用的 next 主题 <code>languages</code> 目录下是  <code>zh-CN.yml</code> ，将其修改为 <code>zh-Hans.yml</code>后，该问题解决.</p>
-<h3 id="使用-ssh-地址部署失败"><a class="header-anchor" href="#使用-ssh-地址部署失败">¶</a>使用  SSH 地址部署失败</h3>
+<h2>使用  SSH 地址部署失败</h2>
 <p>笔者生成 <code>ssh key</code> 时自定义了文件名， 导致部署时出现了下面的问题：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git@github.com: Permission denied (publickey).</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br><span class="line"></span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
 <p>解决方法也很简单，在 <code>bash</code> 中执行以下命令即可：</p>
@@ -454,9 +447,12 @@
 <p>注意将 <code>[file-name]</code> 替换成自己的 <code>ssh key</code> 文件名。如果你将 <code>ssh key</code> 文件生成在了其他目录，则需要替换  <code>[file-name]</code> 前的路径。</p>
 <p>如果在执行该命令后出现了 <code>Could not open a connection to your authentication agent.</code> 的问题，则先执行以下命令即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-agent bash</span><br></pre></td></tr></table></figure>
-<h2 id="写在最后"><a class="header-anchor" href="#写在最后">¶</a>写在最后</h2>
-<p>拖拉了很久，终于把自己的个人博客搭建起来了，希望自己可以坚持写下去。</p>
-<h2 id="参考链接"><a class="header-anchor" href="#参考链接">¶</a>参考链接</h2>
+<h2>文章末尾自动添加版权信息</h2>
+<p>笔者使用的是主题是 <code>NexT 7.1.0</code> 版本, 此版本的配置方式为：在主题配置文件中找到 <code>creative_commons</code> 字段，进行如下配置即可：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">creative_commons:</span></span><br><span class="line"><span class="attr">  license:</span> <span class="string">by-nc-sa</span></span><br><span class="line"><span class="attr">  sidebar:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  post:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  language:</span> <span class="string">deed.zh</span></span><br></pre></td></tr></table></figure>
+<p>如果想在侧边栏也显示 <code>CC license</code> 的图标，则将 <code>sidebar</code> 字段值配置为 <code>true</code> 即可，配置完成之后效果如下：</p>
+<p><img src="/images/sidebar-show-cc-license.png" alt></p>
+<h2>参考链接</h2>
 <p><a href="https://blog.csdn.net/science_Lee/article/details/84633237,%22Hexo%E8%AF%AD%E8%A8%80%E4%B8%8D%E7%94%9F%E6%95%88%E9%97%AE%E9%A2%98%22" target="_blank" rel="noopener">Hexo语言不生效问题</a></p>
 <p><a href="https://www.cnblogs.com/sheldonxu/archive/2012/09/17/2688281.html" target="_blank" rel="noopener">执行ssh-add时出现Could not open a connection to your authentication agent</a></p>
 
@@ -493,7 +489,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://haroldkwan.github.io/2019/04/21/第一篇博客-Hello-World/" title="第一篇博客, Hello World!">https://haroldkwan.github.io/2019/04/21/第一篇博客-Hello-World/</a>
+    <a href="https://haroldkwan.github.io/2019/05/01/Hexo-NexT搭建个人博客指北/" title="Hexo+NexT搭建个人博客指北">https://haroldkwan.github.io/2019/05/01/Hexo-NexT搭建个人博客指北/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -622,12 +618,6 @@
                     
                       
                     
-                      
-                    
-                      
-                    
-                      
-                    
                     <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -681,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建博客时遇到的问题"><span class="nav-number">1.</span> <span class="nav-text">¶搭建博客时遇到的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语言设置未生效"><span class="nav-number">1.1.</span> <span class="nav-text">¶语言设置未生效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-ssh-地址部署失败"><span class="nav-number">1.2.</span> <span class="nav-text">¶使用  SSH 地址部署失败</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写在最后"><span class="nav-number">2.</span> <span class="nav-text">¶写在最后</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">¶参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">语言设置未生效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">使用  SSH 地址部署失败</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">文章末尾自动添加版权信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -689,6 +679,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -740,13 +737,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
     
 
     
